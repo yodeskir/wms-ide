@@ -1,0 +1,3 @@
+[submodule "wms-tools"]
+	path = wms-tools
+	url = https://github.com/yodeskir/wms-tools.git
