@@ -1,0 +1,41 @@
+<div #drawingContainer id="drawingContainer">
+  <nz-tabset [nzTabBarExtraContent]="extraTemplate" [nzType]="'card'">
+    <nz-tab nzTitle="Design">
+      <svg #drawingSvg id="drawingSvg" aria-labelledby="title desc" role="img">
+        <g *ngFor="let line of lines">
+          <line [attr.x1]="line.x1" [attr.x2]="line.x2" [attr.y1]="line.y1" [attr.y2]="line.y2" class="line" />
+        </g>
+        <g>
+          <g class="text" *ngFor="let pntc of XAxisValues[0]">
+            <text [attr.x]="pntc.Xi" [attr.y]="pntc.Yi" font-size="9.5" fill="#222">{{pntc.X}}</text>
+          </g>
+        </g>
+        <g>
+          <g class="text" *ngFor="let pntc of YAxisValues[0]">
+            <text [attr.x]="pntc.Xi" [attr.y]="pntc.Yi" font-size="9.5" fill="#222" text-anchor="start"
+              alignment-baseline="central">{{pntc.Y}}</text>
+          </g>
+        </g>
+        <g *ngFor="let pntr of pointValues">
+          <g class="square" *ngFor="let pntc of pntr">
+            <rect class="point-rect" [attr.x]="pntc.Xi" [attr.y]="pntc.Yi" width="20" height="20" fill="transparent"
+              (click)="pointClick($event)" [attr.data-active]="pntc.Active" [attr.data-x]="pntc.X"
+              [attr.data-y]="pntc.Y" />
+          </g>
+        </g>
+      </svg>
+    </nz-tab>
+    <nz-tab nzTitle="Content">
+
+    </nz-tab>
+  </nz-tabset>
+  <ng-template #extraTemplate>
+    <button nz-button nzType="default" (click)="addStep($event)">
+      <i nz-icon nzType="border-verticle" nzTheme="outline"></i>Add new step
+    </button>
+    <button nz-button nzType="default" (click)="addStep($event)">
+        <i nz-icon nzType="check" nzTheme="outline"></i>Finish symbol
+    </button>
+  </ng-template>
+
+</div>

@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="AppGis - A Small GIS & Development Company">
+    <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta name="author" content="AppGis">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="~/images/favicon.png">
+    <link rel="apple-touch-icon" href="~/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/apple-touch-icon-114x114.png">
+    <!-- animation -->
+    <link rel="stylesheet" href="~/css/animate.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <!-- et line icon -->
+    <link rel="stylesheet" href="~/css/et-line-icons.css" />
+    <!-- font-awesome icon -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <!-- revolution slider -->
+    <link rel="stylesheet" href="~/css/extralayers.css" />
+    <link rel="stylesheet" href="~/css/settings.css" />
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="~/css/magnific-popup.css" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="~/css/owl.carousel.css" />
+    <link rel="stylesheet" href="~/css/owl.transitions.css" />
+    <link rel="stylesheet" href="~/css/full-slider.css" />
+    <!-- text animation -->
+    <link rel="stylesheet" href="~/css/text-effect.css" />
+    <!-- hamburger menu  -->
+    <link rel="stylesheet" href="~/css/menu-hamburger.css" />
+    <!-- common -->
+    <link rel="stylesheet" href="~/css/style.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="~/css/responsive.css" />
+    <!--[if IE]>
+        <link rel="stylesheet" href="~/css/style-ie.css" />
+    <![endif]-->
+    <!--[if IE]>
+        <script src="~/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- navigation panel -->
+    <nav class="navbar navbar-default navbar-fixed-top nav-transparent overlay-nav sticky-nav nav-white nav-dark" role="navigation">
+        <div class="container">
+            <div class="row">
+                <!-- logo -->
+                <div class="col-md-2 pull-left"><a class="logo-light" href="Index"><img alt="" src="~/images/logo-white.png" class="logo" /></a><a class="logo-dark" href="index.html"><img alt="" src="~/images/logo-white.png" class="logo" /></a></div>
+                <!-- end logo -->
+                <!-- search and cart  -->
+                <div class="col-md-2 no-padding-left search-cart-header pull-right">
+                    <div id="top-search">
+                        <!-- nav search -->
+                        <a href="#search-header" class="header-search-form"><i class="fa fa-search search-button"></i></a>
+                        <!-- end nav search -->
+                    </div>
+                    <!-- search input-->
+                    <form id="search-header" method="post" action="#" name="search-header" class="mfp-hide search-form-result">
+                        <div class="search-form position-relative">
+                            <button type="submit" class="fa fa-search close-search search-button"></button>
+                            <input type="text" name="search" class="search-input" placeholder="Enter your keywords..." autocomplete="off">
+                        </div>
+                    </form>
+                    <!-- end search input -->
+                </div>
+                <!-- end search and cart  -->
+                <!-- toggle navigation -->
+                <div class="navbar-header col-sm-8 col-xs-2 pull-right">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <!-- toggle navigation end -->
+                <!-- main menu -->
+                <div class="col-md-8 no-padding-right accordion-menu text-right">
+                    <div class="navbar-collapse collapse">
+                        <ul id="accordion" class="nav navbar-nav navbar-right panel-group">
+                            <!-- menu item -->
+                            <li class="dropdown panel">
+                                <a href="/Index" class="collapsed" data-hover="dropdown">Home <i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <!-- end menu item -->
+                            <!-- menu item -->
+                            <li class="dropdown panel">
+                                <a href="/demo/mymaps" class="collapsed" data-hover="dropdown">Demo <i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <!-- end menu item -->
+                            <!-- menu item -->
+                            <li class="dropdown panel">
+                                <a href="/Register" class="collapsed" data-hover="dropdown">Register <i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <!-- end menu item -->
+                            <!-- menu item -->
+                            <li class="dropdown panel">
+                                <a href="/About" class="collapsed" data-hover="dropdown">About <i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <!-- end menu item -->
+                            <!-- menu item -->
+                            <li class="dropdown panel">
+                                <a href="/Contact" class="collapsed" data-hover="dropdown">Contact <i class="fa fa-angle-down"></i></a>
+                            </li>
+                            <!-- end menu item -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- end main menu -->
+            </div>
+        </div>
+    </nav>
+    <!--end navigation panel -->
+
+    <partial name="_CookieConsentPartial" />
+
+    <div>
+
+        @RenderBody()
+
+
+        <footer>
+            <div class=" bg-white footer-top">
+                <div class="container">
+                    <div class="row margin-four">
+                        <!-- phone -->
+                        <div class="col-md-4 col-sm-4 text-center"><i class="icon-phone small-icon black-text"></i><h6 class="black-text margin-two no-margin-bottom">438-406-6276</h6></div>
+                        <!-- end phone -->
+                        <!-- address -->
+                        <div class="col-md-4 col-sm-4 text-center"><i class="icon-map-pin small-icon black-text"></i><h6 class="black-text margin-two no-margin-bottom">Montreal, QC, Canada</h6></div>
+                        <!-- end address -->
+                        <!-- email -->
+                        <div class="col-md-4 col-sm-4 text-center"><i class="icon-envelope small-icon black-text"></i><h6 class="margin-two no-margin-bottom"><a href="mailto:info@appgis.com" class="black-text">info@appgis.com</a></h6></div>
+                        <!-- end email -->
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-middle">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 footer-link1 xs-display-none">
+                        <!-- headline -->
+                        <h5>About Us</h5>
+                        <!-- end headline -->
+                        <!-- text -->
+                        <p class="footer-text">AppGis offer professional, yet personalized services in Software development & GIS integration susch as Mapserver and other OSGeo technologies such as PostGIS, GDAL/OGR and OpenLayers</p>
+                        <!-- end text -->
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-4 footer-link2 col-md-offset-3">
+                        <!-- headline -->
+                        <h5>Company</h5>
+                        <!-- end headline -->
+                        <!-- link -->
+                        <ul>
+                            <li><a href="about-us.html">About Company</a></li>
+                            <li><a href="about-us.html">What We Do</a></li>
+                            <li><a href="about-us.html">What We Think</a></li>
+                        </ul>
+                        <!-- end link -->
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-xs-4  footer-link3">
+                        <!-- headline -->
+                        <h5>Services</h5>
+                        <!-- end headline -->
+                        <!-- link -->
+                        <ul>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">MapServer Integration</a></li>
+                            <li><a href="services.html">OSM Based Maps Design</a></li>
+                            <li><a href="services.html">Maps Digitization</a></li>
+                        </ul>
+                        <!-- end link -->
+                    </div>
+                </div>
+                <div class="wide-separator-line bg-mid-gray no-margin-lr margin-three no-margin-bottom"></div>
+                <div class="row margin-four no-margin-bottom">
+                    <div class="col-md-6 col-sm-12 sm-text-center sm-margin-bottom-four">
+                        <!-- link -->
+                        <ul class="list-inline footer-link text-uppercase">
+                            <li><a href="About">About</a></li>
+                            @*<li><a href="blog-masonry-3columns.html">Blog</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>*@
+                            <li><a href="Contact">Contact</a></li>
+                        </ul>
+                        <!-- end link -->
+                    </div>
+                    <div class="col-md-6 col-sm-12 footer-social text-right sm-text-center">
+                        <!-- social media link -->
+                        <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="https://plus.google.com"><i class="fa fa-google-plus"></i></a>
+                        <a target="_blank" href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                        <!-- end social media link -->
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-dark-gray footer-bottom">
+                <div class="container">
+                    <div class="row margin-three">
+                        <!-- copyright -->
+                        <div class="col-md-6 col-sm-6 col-xs-12 copyright text-left letter-spacing-1 xs-text-center xs-margin-bottom-one">
+                            &copy; 2015 H-Code is proudly powered by ThemeZaa.
+                        </div>
+                        <!-- end copyright -->
+                        <!-- logo -->
+                        <div class="col-md-6 col-sm-6 col-xs-12 footer-logo text-right xs-text-center">
+                            <a href="index.html"><img src="~/images/logo-light-gray.png" alt="" /></a>
+                        </div>
+                        <!-- end logo -->
+                    </div>
+                </div>
+            </div>
+            <!-- scroll to top -->
+            <a href="javascript:;" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+            <!-- scroll to top End... -->
+        </footer>
+        <!-- end footer -->
+
+    </div>
+
+    <!-- javascript libraries / javascript files set #1 -->
+    <script type="text/javascript" src="~/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/js/modernizr.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap-hover-dropdown.js"></script>
+    <script type="text/javascript" src="~/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="~/js/skrollr.min.js"></script>
+    <script type="text/javascript" src="~/js/smooth-scroll.js"></script>
+    <!-- jquery appear -->
+    <script type="text/javascript" src="~/js/jquery.appear.js"></script>
+    <!-- animation -->
+    <script type="text/javascript" src="~/js/wow.min.js"></script>
+    <!-- page scroll -->
+    <script type="text/javascript" src="~/js/page-scroll.js"></script>
+    <!-- easy piechart-->
+    <script type="text/javascript" src="~/js/jquery.easypiechart.js"></script>
+    <!-- parallax -->
+    <script type="text/javascript" src="~/js/jquery.parallax-1.1.3.js"></script>
+    <!--portfolio with shorting tab -->
+    <script type="text/javascript" src="~/js/jquery.isotope.min.js"></script>
+    <!-- owl slider  -->
+    <script type="text/javascript" src="~/js/owl.carousel.min.js"></script>
+    <!-- magnific popup  -->
+    <script type="text/javascript" src="~/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="~/js/popup-gallery.js"></script>
+    <!-- text effect  -->
+    <script type="text/javascript" src="~/js/text-effect.js"></script>
+    <!-- revolution slider  -->
+    <script type="text/javascript" src="~/js/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.revolution.js"></script>
+    <!-- counter  -->
+    <script type="text/javascript" src="~/js/counter.js"></script>
+    <!-- countTo -->
+    <script type="text/javascript" src="~/js/jquery.countTo.js"></script>
+    <!-- fit videos  -->
+    <script type="text/javascript" src="~/js/jquery.fitvids.js"></script>
+    <!-- imagesloaded  -->
+    <script type="text/javascript" src="~/js/imagesloaded.pkgd.min.js"></script>
+    <!-- hamburger menu-->
+    <script type="text/javascript" src="~/js/classie.js"></script>
+    <script type="text/javascript" src="~/js/hamburger-menu.js"></script>
+    <!-- setting -->
+    <script type="text/javascript" src="~/js/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

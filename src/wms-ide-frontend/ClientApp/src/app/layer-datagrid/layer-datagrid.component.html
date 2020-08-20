@@ -1,0 +1,38 @@
+<div class="layergrid-wrap">
+  <nz-page-header nzTitle="{{layerName}}">
+    <nz-page-header-content>
+      <div nz-row class="content">
+        <div nz-col nzSpan="8">
+          <label>Filter by: </label>
+          <nz-select [(ngModel)]="filterBy" style="width: 60%;">
+            <nz-option *ngFor="let c of columnNames" [nzValue]="c" [nzLabel]="c"></nz-option>
+          </nz-select>
+        </div>
+        <div nz-col nzSpan="5">
+          <nz-select [(ngModel)]="filterOpType" style="width: 95%;">
+            <nz-option nzValue="contains" nzLabel="Contains"></nz-option>
+            <nz-option nzValue="notContains" nzLabel="Not contains"></nz-option>
+            <nz-option nzValue="equals" nzLabel="Equals"></nz-option>
+            <nz-option nzValue="notEqual" nzLabel="Not Equal"></nz-option>
+            <nz-option nzValue="startsWith" nzLabel="Starts With"></nz-option>
+            <nz-option nzValue="endsWith" nzLabel="Ends With"></nz-option>
+          </nz-select>
+        </div>
+        <div nz-col nzSpan="5">
+          <input nz-input [(ngModel)]="filterValue" style="width: 95%;" />
+        </div>
+        <div nz-col nzSpan="5">
+          <button nz-button nzType="default" (click)="applyFilter()">
+            <i nz-icon type="filter"></i>Apply filter
+          </button>
+        </div>
+      </div>
+    </nz-page-header-content>
+  </nz-page-header>
+  <div class="wrap">
+    <ag-grid-angular *ngIf="(IsGridReady===true)" style="width: 100%; height: 100%;" class="ag-theme-balham"
+      [columnDefs]="columnDefs" [columnDefs]="columnDefs" [rowModelType]="rowModelType" [rowSelection]="rowSelection"
+      [maxBlocksInCache]="maxBlocksInCache" [suppressRowClickSelection]="true" (gridReady)="onGridReady($event)">
+    </ag-grid-angular>
+  </div>
+</div>

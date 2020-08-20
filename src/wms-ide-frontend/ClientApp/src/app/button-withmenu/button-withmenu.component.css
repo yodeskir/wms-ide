@@ -1,0 +1,13 @@
+.last-button-group {
+    border-bottom-right-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+
+.ant-tag {
+    margin: 0 6px 0 0;
+    line-height: 16px;
+    height: 18px;
+    padding: 0 4px;
+    font-size: 10px;
+    opacity: 1;
+}

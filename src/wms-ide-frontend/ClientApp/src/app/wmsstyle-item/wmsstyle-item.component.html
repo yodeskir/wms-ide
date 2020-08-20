@@ -1,0 +1,3 @@
+<span class="ellipsis"><i *ngIf="(wmsItem.valueType==0)" nz-icon type="{{blockIcon}}" theme="outline"></i> {{wmsItem.name}}</span>
+<span *ngIf="(isText==true)" class="wmsitem-value ellipsis">{{wmsItem.previewValue}}</span>
+<nz-tag *ngIf="(isColor==true)" [nzColor]="valuePreview"><span>{{wmsItem.previewValue}}</span></nz-tag>

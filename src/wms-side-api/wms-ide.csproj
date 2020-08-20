@@ -1,0 +1,271 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>wms_ide</AssemblyName>
+    <RootNamespace>wms_ide</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\animate.css" />
+    <Content Remove="wwwroot\css\bootstrap.css" />
+    <Content Remove="wwwroot\css\et-line-icons.css" />
+    <Content Remove="wwwroot\css\extralayers.css" />
+    <Content Remove="wwwroot\css\font-awesome.min.css" />
+    <Content Remove="wwwroot\css\full-slider.css" />
+    <Content Remove="wwwroot\css\magnific-popup.css" />
+    <Content Remove="wwwroot\css\menu-hamburger.css" />
+    <Content Remove="wwwroot\css\ol.css" />
+    <Content Remove="wwwroot\css\ol.css.map" />
+    <Content Remove="wwwroot\css\ol3-layerswitcher.css" />
+    <Content Remove="wwwroot\css\owl.carousel.css" />
+    <Content Remove="wwwroot\css\owl.transitions.css" />
+    <Content Remove="wwwroot\css\responsive.css" />
+    <Content Remove="wwwroot\css\settings.css" />
+    <Content Remove="wwwroot\css\style-ie.css" />
+    <Content Remove="wwwroot\css\style.css" />
+    <Content Remove="wwwroot\css\text-effect.css" />
+    <Content Remove="wwwroot\fonts\et-line.eot" />
+    <Content Remove="wwwroot\fonts\et-line.svg" />
+    <Content Remove="wwwroot\fonts\et-line.ttf" />
+    <Content Remove="wwwroot\fonts\et-line.woff" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.eot" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.svg" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.woff" />
+    <Content Remove="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <Content Remove="wwwroot\fonts\FontAwesome.otf" />
+    <Content Remove="wwwroot\fonts\revicons.eot" />
+    <Content Remove="wwwroot\fonts\revicons.svg" />
+    <Content Remove="wwwroot\fonts\revicons.ttf" />
+    <Content Remove="wwwroot\fonts\revicons.woff" />
+    <Content Remove="wwwroot\images\logo-big.png" />
+    <Content Remove="wwwroot\images\logo-dark.png" />
+    <Content Remove="wwwroot\images\logo-email.png" />
+    <Content Remove="wwwroot\images\logo-gray.png" />
+    <Content Remove="wwwroot\images\logo-light-big.png" />
+    <Content Remove="wwwroot\images\logo-light-gray.png" />
+    <Content Remove="wwwroot\images\logo-light-medium.png" />
+    <Content Remove="wwwroot\images\logo-light.png" />
+    <Content Remove="wwwroot\images\logo-orange.png" />
+    <Content Remove="wwwroot\images\logo-white.png" />
+    <Content Remove="wwwroot\images\logo-yellow.png" />
+    <Content Remove="wwwroot\images\pull-menu.png" />
+    <Content Remove="wwwroot\images\world-map.jpg" />
+    <Content Remove="wwwroot\js\ajax-popup-slider.js" />
+    <Content Remove="wwwroot\js\bootstrap-hover-dropdown.js" />
+    <Content Remove="wwwroot\js\bootstrap.js" />
+    <Content Remove="wwwroot\js\classie.js" />
+    <Content Remove="wwwroot\js\counter.js" />
+    <Content Remove="wwwroot\js\hamburger-menu.js" />
+    <Content Remove="wwwroot\js\html5shiv.js" />
+    <Content Remove="wwwroot\js\imagesloaded.pkgd.min.js" />
+    <Content Remove="wwwroot\js\jquery.appear.js" />
+    <Content Remove="wwwroot\js\jquery.countTo.js" />
+    <Content Remove="wwwroot\js\jquery.easing.1.3.js" />
+    <Content Remove="wwwroot\js\jquery.easypiechart.js" />
+    <Content Remove="wwwroot\js\jquery.fitvids.js" />
+    <Content Remove="wwwroot\js\jquery.isotope.min.js" />
+    <Content Remove="wwwroot\js\jquery.magnific-popup.min.js" />
+    <Content Remove="wwwroot\js\jquery.min.js" />
+    <Content Remove="wwwroot\js\jquery.parallax-1.1.3.js" />
+    <Content Remove="wwwroot\js\jquery.revolution.js" />
+    <Content Remove="wwwroot\js\jquery.tools.min.js" />
+    <Content Remove="wwwroot\js\jquery.viewport.mini.js" />
+    <Content Remove="wwwroot\js\layerswitcher.js" />
+    <Content Remove="wwwroot\js\main-map.js" />
+    <Content Remove="wwwroot\js\main.js" />
+    <Content Remove="wwwroot\js\modernizr.js" />
+    <Content Remove="wwwroot\js\ol.js" />
+    <Content Remove="wwwroot\js\ol.js.map" />
+    <Content Remove="wwwroot\js\one-page-main.js" />
+    <Content Remove="wwwroot\js\owl.carousel.min.js" />
+    <Content Remove="wwwroot\js\page-scroll.js" />
+    <Content Remove="wwwroot\js\polyfill.min.js" />
+    <Content Remove="wwwroot\js\popup-gallery.js" />
+    <Content Remove="wwwroot\js\skrollr.min.js" />
+    <Content Remove="wwwroot\js\smooth-scroll.js" />
+    <Content Remove="wwwroot\js\text-effect.js" />
+    <Content Remove="wwwroot\js\velocity-animation.js" />
+    <Content Remove="wwwroot\js\velocity.min.js" />
+    <Content Remove="wwwroot\js\wow.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\animate.css" />
+    <None Include="wwwroot\css\bootstrap.css" />
+    <None Include="wwwroot\css\et-line-icons.css" />
+    <None Include="wwwroot\css\extralayers.css" />
+    <None Include="wwwroot\css\font-awesome.min.css" />
+    <None Include="wwwroot\css\full-slider.css" />
+    <None Include="wwwroot\css\magnific-popup.css" />
+    <None Include="wwwroot\css\menu-hamburger.css" />
+    <None Include="wwwroot\css\ol.css" />
+    <None Include="wwwroot\css\ol.css.map" />
+    <None Include="wwwroot\css\ol3-layerswitcher.css" />
+    <None Include="wwwroot\css\owl.carousel.css" />
+    <None Include="wwwroot\css\owl.transitions.css" />
+    <None Include="wwwroot\css\responsive.css" />
+    <None Include="wwwroot\css\settings.css" />
+    <None Include="wwwroot\css\style-ie.css" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\css\text-effect.css" />
+    <None Include="wwwroot\fonts\et-line.eot" />
+    <None Include="wwwroot\fonts\et-line.svg" />
+    <None Include="wwwroot\fonts\et-line.ttf" />
+    <None Include="wwwroot\fonts\et-line.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\fonts\revicons.eot" />
+    <None Include="wwwroot\fonts\revicons.svg" />
+    <None Include="wwwroot\fonts\revicons.ttf" />
+    <None Include="wwwroot\fonts\revicons.woff" />
+    <None Include="wwwroot\images\logo-big.png" />
+    <None Include="wwwroot\images\logo-dark.png" />
+    <None Include="wwwroot\images\logo-email.png" />
+    <None Include="wwwroot\images\logo-gray.png" />
+    <None Include="wwwroot\images\logo-light-big.png" />
+    <None Include="wwwroot\images\logo-light-gray.png" />
+    <None Include="wwwroot\images\logo-light-medium.png" />
+    <None Include="wwwroot\images\logo-light.png" />
+    <None Include="wwwroot\images\logo-orange.png" />
+    <None Include="wwwroot\images\logo-white.png" />
+    <None Include="wwwroot\images\logo-yellow.png" />
+    <None Include="wwwroot\images\pull-menu.png" />
+    <None Include="wwwroot\images\world-map.jpg" />
+    <None Include="wwwroot\js\ajax-popup-slider.js" />
+    <None Include="wwwroot\js\bootstrap-hover-dropdown.js" />
+    <None Include="wwwroot\js\bootstrap.js" />
+    <None Include="wwwroot\js\classie.js" />
+    <None Include="wwwroot\js\counter.js" />
+    <None Include="wwwroot\js\hamburger-menu.js" />
+    <None Include="wwwroot\js\html5shiv.js" />
+    <None Include="wwwroot\js\imagesloaded.pkgd.min.js" />
+    <None Include="wwwroot\js\jquery.appear.js" />
+    <None Include="wwwroot\js\jquery.countTo.js" />
+    <None Include="wwwroot\js\jquery.easing.1.3.js" />
+    <None Include="wwwroot\js\jquery.easypiechart.js" />
+    <None Include="wwwroot\js\jquery.fitvids.js" />
+    <None Include="wwwroot\js\jquery.isotope.min.js" />
+    <None Include="wwwroot\js\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\js\jquery.min.js" />
+    <None Include="wwwroot\js\jquery.parallax-1.1.3.js" />
+    <None Include="wwwroot\js\jquery.revolution.js" />
+    <None Include="wwwroot\js\jquery.tools.min.js" />
+    <None Include="wwwroot\js\jquery.viewport.mini.js" />
+    <None Include="wwwroot\js\layerswitcher.js" />
+    <None Include="wwwroot\js\main-map.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\modernizr.js" />
+    <None Include="wwwroot\js\ol.js" />
+    <None Include="wwwroot\js\ol.js.map" />
+    <None Include="wwwroot\js\one-page-main.js" />
+    <None Include="wwwroot\js\owl.carousel.min.js" />
+    <None Include="wwwroot\js\page-scroll.js" />
+    <None Include="wwwroot\js\polyfill.min.js" />
+    <None Include="wwwroot\js\popup-gallery.js" />
+    <None Include="wwwroot\js\skrollr.min.js" />
+    <None Include="wwwroot\js\smooth-scroll.js" />
+    <None Include="wwwroot\js\text-effect.js" />
+    <None Include="wwwroot\js\velocity-animation.js" />
+    <None Include="wwwroot\js\velocity.min.js" />
+    <None Include="wwwroot\js\wow.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.linux.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.win.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="appsettings.wmsstyle.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Pages\About.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Contact.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\demo\msdemo.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Error.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Privacy.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Register.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Shared\_CookieConsentPartial.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Shared\_Layout - Backup.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Shared\_Layout-Map.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Shared\_Layout.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\Shared\_ValidationScriptsPartial.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\_ViewImports.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Pages\_ViewStart.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Properties\launchSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\demo\msdemo.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\demo\msdemo.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\fileManager\fileManager.csproj" />
+    <ProjectReference Include="..\mapfileManager\mapfileManager.csproj" />
+    <ProjectReference Include="..\wmsDataAccess\wmsDataAccess.csproj" />
+    <ProjectReference Include="..\wmsShared\wmsShared.csproj" />
+  </ItemGroup>
+
+</Project>

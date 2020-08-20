@@ -1,0 +1,46 @@
+<!-- content section -->
+<section class="bg-blue wow fadeIn">
+  <div class="container">
+    <div class="row">
+      <div class="login-form col-md-4 col-sm-7 col-xs-10 center-col xs-no-padding">
+        <nz-divider class="signin-title" [nzText]="signinText">
+          <ng-template #signinText><i nz-icon type="user"></i> Sign in</ng-template>
+        </nz-divider>
+        <form>
+          <div class="form-group no-margin-bottom">
+            <nz-input-group [nzSuffix]="suffixTemplate" [nzPrefix]="prefixUser">
+              <input type="text" nz-input placeholder="Enter your username" [(ngModel)]="username" name="username"
+                class="input-round">
+            </nz-input-group>
+            <ng-template #prefixUser><i nz-icon type="user"></i></ng-template>
+            <ng-template #suffixTemplate><i nz-icon type="close-circle" (click)="username=null" *ngIf="username"></i>
+            </ng-template>
+          </div>
+          <div class="form-group no-margin-bottom">
+            <nz-input-group [nzSuffix]="suffixTemplate" [nzPrefix]="prefixPassword">
+              <input type="password" nz-input placeholder="Enter your password" [(ngModel)]="password" name="password"
+                class="input-round">
+            </nz-input-group>
+            <ng-template #prefixPassword><i nz-icon type="lock" theme="outline"></i></ng-template>
+            <ng-template #suffixTemplate><i nz-icon type="close-circle" (click)="password=null" *ngIf="password"></i>
+            </ng-template>
+          </div>
+          <button nz-button class="wmsbutton" [nzType]="'primary'" (click)="doLogin()"
+            style="margin-top: 16px; margin-bottom: 16px">Sign in</button>
+          <div nz-row>
+            <div nz-col nzSpan="24" class="padding-one">
+              <nz-tag [nzColor]="'cyan'">Need an account?</nz-tag>
+              <a class="text-small padding-one" (click)="registerNewAccount()" title="Sign up a for appgis">Sign up for appgis</a>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col nzSpan="24" class="padding-one">
+              <a class="text-small" (click)="resetPassword()" title="Reset password">Reset password</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end content section -->

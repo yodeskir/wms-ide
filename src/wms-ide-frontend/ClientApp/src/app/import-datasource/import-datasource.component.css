@@ -1,0 +1,6 @@
+.import-panel {
+    display: none;
+}
+.show-import-panel .import-panel {
+    display: block;
+}

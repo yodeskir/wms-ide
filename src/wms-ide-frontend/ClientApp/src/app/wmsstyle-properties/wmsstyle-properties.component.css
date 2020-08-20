@@ -1,0 +1,387 @@
+.props-wrap {
+  font-size: 10px;
+  left: -200px;
+  right: 0;
+  padding: 16px 10px 35px 15px;
+  position: fixed;
+  width: 380px;
+  height: 100%;
+  z-index: 901;
+  background: #FFFFFF;
+  border-left: solid 1px #dfdfdf;
+  border-right: solid 0.1px #dfdfdf;
+}
+
+  .props-wrap .row {
+    padding-bottom: 5px;
+  }
+    .props-wrap .row label {
+      margin-bottom: 5px;
+      display: block;
+    }
+    
+.props-wrap label {
+  font-weight: 600;
+  font-size: 11px;
+}
+.show-props .props-wrap {
+  left: 250px !important;
+}
+
+.props-wrap ul > li, .props-wrap ul > li:hover, .props-wrap ul > li:active, .props-wrap ul > li:focus {
+    background: #f7f7f7 !important;
+    cursor: pointer;
+  }
+
+.props-wrap .wmsitem, .props-wrap .wmsitem:hover, .props-wrap .wmsitem.active {
+    border-radius: 5px;
+    margin-top: 2px;
+    padding: 4px 6px 4px 6px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgb(66, 82, 110);
+    fill: transparent;
+    cursor: pointer;
+    width: 130px;
+    display: block;
+    border: solid 1px #ffffff;
+    line-height: normal;
+    letter-spacing: 0.8px;
+}
+
+.props-wrap .wmsitem:hover, .props-wrap .wmsitem.active {
+  background-color: rgba(30, 30, 66, 0.2);
+  fill: rgba(30, 30, 66, 0.2);
+}
+
+.props-wrap .wmsitem.wmsblocks, .props-wrap .wmsitem.wmsblocks:hover  {
+  color: #D32F2F;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+
+.props-wrap .wmsicontrol-container {
+  padding: 6px;
+  width: 200px;
+  border-left: solid 0.5px #dedede;
+  line-height: normal;
+  height: calc(100vh - 160px);
+}
+.props-wrap .ant-form-item {
+  font-size: 10px;
+  font-weight: 600;
+  font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0 0 2px;
+}
+
+.props-wrap .ant-slider-rail {
+  border-radius: 2px;
+  background-color: #c0c0c0;
+}
+
+  .ngx-contextmenu .dropdown-menu {
+    border: solid 1px #afafaf;
+    background-color: #fff;
+    padding: 10px 25px 15px;
+  }
+  .ngx-contextmenu li:first-child {
+    border-top:none;
+  }
+  .ngx-contextmenu .dropdown-menu li a {
+    color:#444 !important;
+    display: block;
+  }
+  .ngx-contextmenu .dropdown-menu li a:hover {
+    color:#222 !important;
+    background-color:#fff;
+    font-weight: 500;
+  }
+  
+  .props-wrap .ant-input-suffix .ant-btn.ant-btn-default {
+    height: 28px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .props-wrap .ant-btn.ant-btn-default i {
+    color: #096dd9;
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .props-wrap .ant-btn.ant-btn-default:hover {
+    border: 1px solid #d9d9d9;
+  }
+
+  .entry-button {
+    height: 24px;
+    width: 24px;
+    color: #444;
+    font-size: 14px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    line-height: 0 !important;
+  }
+  
+  app-button-withmenu {
+    margin-left: 5px;
+  }
+  
+  .ant-btn-group app-button-withmenu, .ant-btn-group button {
+    margin-left: -1px;
+  }
+  
+  .right-button-class {
+    float: right !important;
+    position: absolute !important;
+    right: 10px;
+    top: 10px;
+    z-index: 0;
+  }
+  .entry-button > i {
+    margin: 0;
+    color: rgb(66, 82, 110);
+    font-size: 12px;
+  }
+  
+  .props-wrap a:hover, .props-wrap a:active, .props-wrap a:focus {
+    color: rgb(66, 82, 110) !important;
+    font-weight: 600 !important;
+    background: transparent !important;
+  }
+
+  .props-wrap .ant-divider.ant-divider-horizontal.ant-divider-with-text-left {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(66, 82, 110)!important;
+    letter-spacing:0.5px !important;
+    margin: 5px 0 !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    width: 99%;
+  }
+
+  .props-wrap .ant-divider.ant-divider-horizontal.ant-divider-with-text-left:first-child {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .props-wrap .ant-divider.ant-divider-horizontal.ant-divider-with-text-left i {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: rgb(66, 82, 110)!important;
+  }
+
+  .props-wrap .ng-scrollbar-view {
+    overflow-x: hidden !important;
+  }
+  .scrollinner {
+    padding: 1px 1px 50px 0;
+  }
+  .ng-scrollbar-container {
+    padding-bottom: 20px;
+  }
+
+    
+  .class-menu {
+    display: inline-block;
+  }
+  .class-menu .ant-btn-group {
+    margin-left: 20px;
+  }
+  
+  .class-menu .ant-btn-group button {
+    height: 28px;
+    line-height: 0;
+    color:#000;
+    padding: 0 8px;
+  }
+  
+  .class-menu .ant-btn-group button i {
+    color:#000;
+    font-size: 12px;
+  }
+  .class-menu .ant-btn>.anticon+span, .ant-btn>span+.anticon{
+    margin-left:2px; 
+  }
+ 
+  .props-wrap .chrome-picker {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.3) !important;
+    box-sizing: initial;
+    width: 180px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  }
+
+  .props-wrap .chrome-picker .chrome-field {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  .props-wrap .chrome-picker .chrome-field:last-child {
+    width: 0px !important;
+  }
+
+  .props-wrap .chrome-picker .chrome-field:first-child {
+    width: 100% !important;
+  }
+
+  .props-wrap .chrome-picker .chrome-field input {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0;
+    font-size: 9px !important;
+  }
+
+  .props-wrap input:not([role="combobox"]), 
+  .props-wrap .wmsbutton {
+    color: #222 !important;
+    font-size: 11px !important;
+    max-height: 28px;
+    height: 28px;
+    text-transform: none;
+    font-weight: 500 !important;
+    border: 1px solid #dfdfdf;
+    padding: 3px 8px !important;
+    width: 100%;
+    /* min-width: 50px; */
+    margin: 0 0 10px 0 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .props-wrap textarea {
+    color: #222 !important;
+    font-size: 10px !important;
+    min-height: 80px !important;
+    text-transform: none;
+    font-weight: 500 !important;
+    border: 1px solid #dfdfdf;
+    padding: 3px 8px !important;
+    width: 100%;
+    min-width: 50px;
+    margin: 0 0 10px 0 !important;
+  }
+    
+  .props-wrap .ant-input-suffix {
+    right: 0px;
+  }
+  
+  .props-wrap .ant-select-selection--single, .props-wrap .ant-select {
+    min-height: 28px;
+    height: 28px !important;
+    color: #222 !important;
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    margin: 0 0 10px 0 !important;
+  }
+  
+  .ant-select-dropdown-menu {
+    font-size: 0.8em;
+  }
+
+  .props-wrap .ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+  }
+
+  .props-wrap .item-help-box {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    border-radius:  4px;
+    border-top: #e4e4e4 solid 1px;
+    padding: 10px;
+    margin-left: 5px;
+    color: #1f3349;
+    font-weight: 500;
+    overflow-wrap: break-word;
+  }
+
+  .props-wrap .item-help-box label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #1f3349;
+  }
+
+  .props-wrap .ant-tabs-nav .ant-tabs-tab {
+    margin: 10px 20px 0 0 !important;
+    padding: 12px 20px !important;
+    cursor: pointer;
+    font-size: .9em;
+    color: #096dd9;
+    text-decoration: none;
+  }
+
+  .props-wrap .nav-tabs-light li a, .props-wrap .nav-tabs-light li:first-child a {
+    margin: 0 22px 0 0 !important;
+    color: #456;
+  }
+
+  .props-wrap .nav-tabs > li > a {
+    letter-spacing: 1px;
+  }
+
+  .props-wrap .wms-slider .ant-tag, .props-wrap .wms-slider .ant-slider-track {
+    background: #096dd9 !important;
+  }
+
+  .props-wrap .ant-input-number, .props-wrap .ant-input-number-input {
+    color: #222 !important;
+    font-size: 10px !important;
+    max-height: 28px;
+    height: 28px;
+    width: 90px;
+    margin: 0 0 10px 0 !important;
+  }
+  .props-wrap .wms-slider .ant-input-number, .props-wrap .wms-slider .ant-input-number-input {
+    width: 60px;
+    margin-left: 10px!important;
+  }
+  .props-wrap .wms-slider .minmax-label {
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+    position: absolute;
+  }
+
+  .props-wrap .ant-input-number-input{
+    border: none !important;
+  }
+
+  .text-center {text-align: center;}
+
+  .props-wrap .ant-table th,
+  .props-wrap .ant-table-body td {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px;
+  }
+  .props-wrap a {
+    color: #096dd9;
+    font-weight: 600;
+    background-color: transparent;
+  }
+  .props-wrap a:hover {
+    color: #096dd9;
+    font-weight: 700;
+    background-color: transparent;
+  }
+
+
+.sketch-picker {
+  width: 200px !important;
+}

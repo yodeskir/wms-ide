@@ -1,0 +1,184 @@
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu-wrap ul li .drag-menu-item,
+.menu-wrap .map-top-menu {
+  padding: 8px 12px 7px 5px;
+  border-radius: 5px;
+  margin-top: 5px; 
+  margin-left: 10px;
+  cursor: pointer;
+  width: 90%;
+}
+
+.menu-wrap .map-top-menu {
+  padding: 8px 12px 7px 5px;
+  margin-left: 0px;
+}
+
+.menu-wrap ul li .drag-menu-item:first,
+.menu-wrap .map-top-menu {
+  margin-top: 10px; 
+}
+
+.menu-wrap ul li .drag-menu-item:hover, 
+.menu-wrap ul li .drag-menu-item.active,
+.map-top-menu.active {
+  cursor: pointer;
+  background-color: rgba(30, 30, 66, 0.2);
+  color: rgb(66, 82, 110);
+  fill: rgba(30, 30, 66, 0.2);
+}
+
+.pull-menu.menu-wrap .navbar-nav .section-link {
+  font-weight: 600 !important;
+  font-size: 0.72em;
+  color: rgb(66, 82, 110)!important;
+  letter-spacing: 0.3px;
+}
+
+.menu-wrap span.section-link {
+  font-weight: 600 !important;
+  color: rgb(66, 82, 110)!important;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  margin-left: 5px;
+  overflow:hidden;
+	white-space:nowrap;
+  text-overflow:ellipsis;
+  width: 99%;
+}
+
+.pull-menu.menu-wrap .navbar-nav li {
+  width: 99%;
+}
+
+
+.menu-wrap span.section-link > i {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: rgb(66, 82, 110)!important;
+}
+  .menu-wrap span.section-link:active > i {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: rgb(66, 82, 110)!important;
+  }
+
+  .menu-wrap .ant-btn.ant-btn-primary {
+    background-color: rgb(250, 250, 250)!important;
+    border: none !important;
+    color: rgb(66, 82, 110)!important;
+    height: 27px!important;
+    width: 27px!important;
+    line-height: 0!important;
+    padding: 0 3px !important;
+    margin-right: 3px;
+    font-size: 1em;
+    transition: none;
+    box-shadow: none;
+  }
+
+  .menu-wrap .ant-btn.ant-btn-primary.pushed {
+    box-shadow: #096dd9 0px 0px 1px;
+  }
+
+  .menu-wrap .ant-switch-checked {
+    background-color: #096dd9;
+    vertical-align: top;
+  }
+
+.menu-wrap {
+  font-size: 1.15em;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 30px 10px 30px 10px;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  z-index: 902;
+  background-color: rgb(250, 250, 250)!important;
+  color: rgb(66, 82, 110)!important;
+  border-right: solid 1px #dcdcdc;
+}
+
+  .menu-wrap .nav.navbar-nav {
+    padding: 0;
+  }
+
+  .menu-wrap .ng-scrollbar-view {
+    overflow-x: hidden !important;
+  }
+  .scrollinner {
+    padding: 1px 1px 50px 0;
+  }
+
+  .menu-wrap .ant-menu-horizontal {
+    background: transparent;
+    border: none;
+    line-height: 25px;
+    margin-top: 10px;
+  }
+
+  .menu-wrap .ant-menu-item, .menu-wrap .ant-menu-submenu-title,
+  .menu-wrap .ant-menu-item:hover, .menu-wrap .ant-menu-submenu-title:hover {
+    padding: 3px 5px;
+    font-size: 16px;
+    color: rgb(66, 82, 110)!important;
+  }
+
+    .menu-wrap .ant-menu-item:hover, .menu-wrap .ant-menu-submenu-title:hover {
+      border-bottom: 2px solid rgba(9, 30, 66, 0.42);
+    }
+
+    .menu-wrap .ant-menu-item-selected, .menu-wrap .ant-menu-submenu-selected,
+    .menu-wrap .ant-menu-item-active, .menu-wrap .ant-menu-submenu-active {
+      border-bottom: 0px;
+    }
+    .menu-wrap .anticon {
+      color: #096dd9 !important;
+    }
+    .menu-wrap .ant-menu-item .anticon, .menu-wrap .ant-menu-submenu-title .anticon {
+      margin:0;
+      font-size: 16px;
+      font-weight: 500; 
+    }
+
+.ant-tooltip-inner {
+  color: #fff;
+  background-color: rgb(22, 22, 22);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.ant-tooltip-placement-top .ant-tooltip-arrow, .ant-tooltip-placement-topLeft .ant-tooltip-arrow, .ant-tooltip-placement-topRight .ant-tooltip-arrow {
+  border-width: 5px 5px 0;
+  border-top-color: rgb(22, 22, 22);
+}
+.ant-tooltip-placement-bottom .ant-tooltip-arrow, .ant-tooltip-placement-bottomLeft .ant-tooltip-arrow, .ant-tooltip-placement-bottomRight .ant-tooltip-arrow {
+  top: 3px;
+  border-width: 0 5px 5px;
+  border-bottom-color: rgb(22, 22, 22);
+}
+  .menu, .icon-list {
+    height: 100%;
+  }
+
+  .icon-list a span {
+    font-weight: 700;
+    margin-left: 10px;
+  }
+
+.show-menu .menu-wrap {
+  left: 0px;
+
+}
+
+.menu-wrap .nav.navbar-nav {
+  width: 100%;
+}

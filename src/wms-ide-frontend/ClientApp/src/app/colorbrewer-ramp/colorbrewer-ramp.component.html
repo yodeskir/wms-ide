@@ -1,0 +1,17 @@
+<div nz-col nzSpan="12">
+  <label>Number of data classes</label>
+  <nz-select [(ngModel)]="numClasses" name="numClasses" style="width:95%" >
+    <nz-option *ngFor="let c of [1,3,4,5,6,7,8,9]" [nzValue]="c" [nzLabel]="c"></nz-option>
+  </nz-select>
+</div>
+<div nz-col nzSpan="12">
+  <label>Color classes</label>
+  <nz-select class="colorbrewer-ramp" [(ngModel)]="colorDataClasses" name="colorDataClasses" 
+    style="width:95%" (nzOpenChange)="updateContinuousColorRamp()" (ngModelChange)="onColorRampChange()">
+    <nz-option nzCustomContent *ngFor="let clEntry of colorRampEntries" nzLabel={{clEntry.name}}
+      nzValue={{clEntry.colorset}}>
+      <nz-tag *ngFor="let cl of clEntry.colorset" [nzColor]="cl" class="ant-tag-ramp"
+        [ngStyle]="{'width': clEntry.width}"> </nz-tag>
+    </nz-option>
+  </nz-select>
+</div>

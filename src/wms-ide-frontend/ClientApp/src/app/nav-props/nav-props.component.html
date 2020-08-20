@@ -1,0 +1,63 @@
+<div>
+  <div nz-col nzSpan="6">
+    <div class="props-wrap">
+      <div nz-row nzType="flex" nzJustify="center" nzAlign="top">
+        <div class="col-md-12 text-center" style="margin-top:1px;">
+          <nz-divider nzOrientation="left" [nzText]="text">
+            <ng-template #text>{{layerName || "MAP"}}
+              <div class="class-menu">
+                <nz-button-group>
+                  <button *ngIf="(IsMapActive===true)" nz-button nzType="default" nzTitle="Edit mode (Advanced)"
+                    nz-tooltip nzPlacement="bottom">
+                    <i nz-icon type="file-markdown" theme="outline"></i>
+                  </button>
+                  <button *ngIf="(IsMapActive!=true)" nz-button nzType="default" nzTitle="Style across data" nz-tooltip
+                    nzPlacement="bottom">
+                    [<i nz-icon [type]="'database'"></i>
+                  </button>
+                  <button *ngIf="(IsMapActive!=true)" nz-button nzType="default" nzTitle="Style across zoom" nz-tooltip
+                    nzPlacement="bottom">
+                    [<i nz-icon [type]="'zoom-in'"></i>
+                  </button>
+                </nz-button-group>
+                <app-button-withmenu [itemMenus]="menuEntries" [blockParent]="activeItemObject" [tooltipNewEntry]="tooltipNewEntry" tooltipPlacement="bottom">
+                </app-button-withmenu>
+              </div>
+            </ng-template>
+          </nz-divider>
+        </div>
+      </div>
+      <nz-tabset [nzTabBarGutter]=10 [(nzSelectedIndex)]="selectedTabIndex">
+        <nz-tab nzTitle="ELEMENTS" nzIndex="1" (nzSelect)="onGeneralChange()">
+          <ng-scrollbar class="scrollsample" [trackY]="true" [trackX]="false" style="height: calc(100vh - 160px);">
+            <div *ngFor="let lItem of itemEntries" class="row" style="padding-left:10px;padding-right:10px;">
+              <app-wms-component [wmsItem]="lItem" [typeOrigin]=false [srcfields]="layerFields"></app-wms-component>
+            </div>
+          </ng-scrollbar>
+        </nz-tab>
+        <nz-tab *ngIf="(objectType!='MAP')" nzTitle="CLASS & STYLES" nzIndex="2" (nzSelect)="onClassChange()">
+          <ng-scrollbar class="scrollsample" [trackY]="true" [trackX]="false" style="height: calc(100vh - 160px);">
+            <nz-collapse [nzBordered]="false">
+              <nz-collapse-panel *ngFor="let lItem of itemClass" [nzHeader]=tmplClassName (nzActiveChange)="onCollapseChange(lItem)">
+                <ng-template #tmplClassName>
+                  {{lItem.byName.label}}
+                </ng-template>
+                <app-button-withmenu [itemMenus]="lItem.availableEntries" [blockParent]="lItem" tooltipNewEntry="Add new entry to this Class"
+                  tooltipPlacement="top" buttonClass="entry-button" ngClass="right-button-class" >
+                </app-button-withmenu>
+                <app-wms-component [wmsItem]="lItem" [typeOrigin]="true" [srcfields]="layerFields"></app-wms-component>
+              </nz-collapse-panel>
+            </nz-collapse>
+          </ng-scrollbar>
+        </nz-tab>
+        <nz-tab nzTitle="OBJECTS" nzIndex="3" (nzSelect)="onExtendedChange()">
+          <ng-scrollbar class="scrollsample" [trackY]="true" [trackX]="false" style="height: calc(100vh - 160px);">
+            <div *ngFor="let lItem of itemBlocks" class="row">
+              <app-wms-component [wmsItem]="lItem" [typeOrigin]="false" [srcfields]="layerFields"></app-wms-component>
+            </div>
+          </ng-scrollbar>
+        </nz-tab>
+      </nz-tabset>
+    </div>
+  </div>
+</div>

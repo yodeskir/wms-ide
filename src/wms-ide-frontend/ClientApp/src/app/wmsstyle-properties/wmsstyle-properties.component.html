@@ -1,0 +1,75 @@
+<div>
+  <div nz-col nzSpan="6">
+    <div class="ant-row props-wrap">
+      <div nz-row nzType="flex" nzJustify="center" nzAlign="top">
+        <div class="col-md-12 text-center" style="margin-top:1px;">
+          <nz-divider nzOrientation="left" [nzText]="activeObjectName">
+            <ng-template #activeObjectName>
+              <i class="anticon" [innerHTML]="menuService.getSvgIcon(layerType)"></i> 
+              {{layerName || "MAP"}}
+            </ng-template>
+          </nz-divider>
+          <div nz-row nzType="flex" nzJustify="end" nzAlign="right" class="ant-row-flex-right">
+            <div class="class-menu">
+              <nz-button-group>
+                <button nz-button nzType="default" nzTitle="Go back" nz-tooltip nzPlacement="bottom"
+                  (click)="switchItemEntriesAndBlocks(null, true)">
+                  <i nz-icon type="arrow-left" theme="outline"></i>
+                </button>
+
+                <app-button-withmenu [itemMenus]="menuEntries" [blockParent]="activeBlock" [tooltipNewEntry]="'Add new'"
+                  tooltipPlacement="bottom">
+                </app-button-withmenu>
+
+                <button  nz-button nzType="default" nzTitle="{{tooltipClone}}" nz-tooltip
+                  nzPlacement="bottom" (click)="cloneActiveBlock()">
+                  <i nz-icon type="snippets" theme="outline"></i>
+                </button>
+
+                <button nz-button nzType="default" [contextMenu]="actionMenu" nzTitle="Delete"
+                  nz-tooltip nzPlacement="bottom" (click)="onContextMenu($event, actionMenuEntries)">
+                  <i nz-icon type="delete" theme="outline"></i>
+                </button>
+                <context-menu #actionMenu>
+                  <ng-template contextMenuItem *ngFor="let menuAction of actionMenuEntries"
+                    (execute)="execActionMenu(menuAction)">
+                    <nz-tag [nzColor]="(menuAction.valueType == 0) ? 'red' : 'blue'" style="font: size 10px;">{{(menuAction.valueType == 0)
+                          ? 'b' : 'p'}}</nz-tag> {{menuAction.name}}
+                    {{(menuAction.valueType == 0) ? '(All properties)' : '(Active property)'}}
+                  </ng-template>
+                </context-menu>
+              </nz-button-group>
+
+            </div>
+          </div>
+
+          <nz-divider nzOrientation="left" [nzText]="objectsCrumb">
+            <ng-template #objectsCrumb>{{crumb}}</ng-template>
+          </nz-divider>
+        </div>
+      </div>
+      <div class="ant-col-12" style="width:150px">
+        <ng-scrollbar class="scrollsample" [trackY]="true" [trackX]="false" style="height: calc(100vh - 160px);">
+          <div *ngFor="let lItem of itemBlocks">
+            <div class="wmsitem wmsblocks" [class.active]="lItem.isActive" (click)='activateWmsItem(lItem)'>
+              <app-wmsstyle-item [wmsItem]="lItem"></app-wmsstyle-item>
+            </div>
+          </div>
+          <div *ngFor="let lItem of itemEntries">
+            <div class="wmsitem" [class.active]="lItem.isActive" (click)='activateWmsItem(lItem)'>
+              <app-wmsstyle-item #wmsItemLink [wmsItem]="lItem"></app-wmsstyle-item>
+            </div>
+          </div>
+        </ng-scrollbar>
+      </div>
+      <div class="ant-col-12 wmsicontrol-container">
+        <app-wms-component #wmsValueComponent [wmsItem]="activeEntry" [typeOrigin]=false [srcfields]="layerFields">
+        </app-wms-component>
+        <div nz-row nzType="flex" nzJustify="left" nzAlign="bottom" class="col-md-12 item-help-box">
+          <label>{{itemHelpEntryName}}</label>
+          <span>{{itemHelp}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

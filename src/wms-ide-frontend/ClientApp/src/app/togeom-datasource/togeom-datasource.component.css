@@ -1,0 +1,19 @@
+.to-geom-panel {
+    padding: 20px;
+    display: none;
+}
+
+.show-fields-to-geom .to-geom-panel {
+    display: block;
+}
+.to-geom-panel .ant-radio-inner:after {
+    width: 5.6px;
+    height: 5.6px;
+    left: 4px;
+    top: 4.5px;
+}
+
+.to-geom-panel .radio-field {
+    display: block;
+    margin-top: 3px; 
+}

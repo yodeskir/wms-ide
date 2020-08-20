@@ -1,0 +1,25 @@
+.bg-blue {
+    background: rgb(7, 71, 166);
+    height: 100%;
+}
+.login-form {
+    align-self: auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 6px; 
+}
+.login-form .ant-input-affix-wrapper {
+    margin: 0 0 20px 0;
+}
+
+.login-form input {
+    text-transform: none;
+}
+
+.login-form .ant-divider-inner-text {
+    font-size: 12px;
+}
+
+.login-form .signin-title .ant-divider-inner-text {
+    font-size: 20px;
+}

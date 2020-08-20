@@ -1,0 +1,24 @@
+<div>
+  <div nz-col nzSpan="6">
+    <div class="props-wrap">
+      <div nz-row nzType="flex" nzJustify="center" nzAlign="top">
+        <div nz-col nzSpan="18" class="text-center" style="margin-top:15px;">
+          <nz-divider nzText="ADD NEW LAYER"></nz-divider>
+        </div>
+      </div>
+      <div nz-row nzType="flex" nzJustify="center" nzAlign="top">
+        <nz-radio-group [(ngModel)]="creationTypeValue" [nzButtonStyle]="'solid'">
+          <label nz-radio-button nzValue="F">From file</label>
+          <label nz-radio-button nzValue="D">From datasource</label>
+        </nz-radio-group>
+      </div>
+      <div *ngIf="creationTypeValue==='F'" nz-row>
+        <app-import-datasource></app-import-datasource>
+        <app-togeom-datasource></app-togeom-datasource>
+      </div>
+      <div *ngIf="creationTypeValue==='D'" nz-row>
+        <app-newfrom-datasource></app-newfrom-datasource>
+      </div>
+    </div>
+  </div>
+</div>

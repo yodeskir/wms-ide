@@ -1,0 +1,11 @@
+﻿@page
+@using wms_ide.Models
+@model msDemoModel
+@{
+    ViewData["Title"] = "Mapserver demo";
+    Layout = "~/Pages/Shared/_Layout-Map.cshtml";
+}
+
+@*<partial name="LayerMenu" model="Model.mapModel.mapObj" />*@
+
+<div id="map" class="msmap"></div>

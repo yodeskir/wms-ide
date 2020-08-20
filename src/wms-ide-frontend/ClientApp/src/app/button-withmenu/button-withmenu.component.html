@@ -1,0 +1,10 @@
+<button ngClass={{buttonClass}} nz-button nzType="default" [disabled]="itemMenus.length===0" nzTitle={{tooltipNewEntry}}
+  nzPlacement={{tooltipPlacement}} nz-tooltip (click)="onContextMenu($event, itemMenus)">
+  <i nz-icon type="plus" theme="outline"></i>
+</button>
+<context-menu #entriesMenu>
+  <ng-template contextMenuItem *ngFor="let mnEntry of itemMenus" (execute)="execMenuEntry(mnEntry)">
+    <nz-tag [nzColor]="(mnEntry.valueType == 0) ? 'red' : 'blue'" style="font: size 10px;">{{(mnEntry.valueType == 0)
+      ? 'b' : 'p'}}</nz-tag> {{mnEntry.name}}
+  </ng-template>
+</context-menu>

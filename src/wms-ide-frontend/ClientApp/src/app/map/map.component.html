@@ -1,0 +1,33 @@
+<div class="container">
+    <div style="height: 100%; width: 100%;position: absolute; left: 250px;">
+        <div style="height: 100%;">
+            <app-nav-menu #navMenuComponent [props]="props"></app-nav-menu>
+            <app-wmsstyle-properties #props></app-wmsstyle-properties>
+            <app-nav-newlayer #newLayer [navMenuComponent]="navMenuComponent"></app-nav-newlayer>
+            <app-layer-datagrid #layerData></app-layer-datagrid>
+        </div>
+    </div>
+</div>
+
+<div id="map" style="width: calc(100% - 250px); height: 100%; position:fixed; left:250px;">
+
+</div>
+
+<ng-template #indicatorTemplate>
+    <i class="anticon anticon-spin anticon-loading" style="font-size: 44px;color: black;"></i>
+</ng-template>
+<nz-spin [nzIndicator]="indicatorTemplate" [nzSpinning]="mapIsLoading" class="loading-container">
+</nz-spin>
+
+<div class="tools-map-container">
+    <nz-button-group>
+        <button nz-button nzType="primary" nzTitle="Save map view" nz-tooltip nzPlacement="bottom"
+            (click)="saveView()"><i nz-icon type="environment"></i></button>
+    </nz-button-group>
+</div>
+
+<div class="info-map-container">
+    <div #infoZoomLevel class="infomap-block">Zoom: {{zoomLevel}}</div>
+    <div #infoCenterMap class="infomap-block">Center: {{centerMap}}</div>
+    <div #refreshRate class="infomap-block">Refresh rate: {{execTime}}</div>
+</div>

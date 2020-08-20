@@ -1,0 +1,50 @@
+<div class="row import-panel">
+  <div class="col-md-12">
+    <form novalidate enctype="multipart/form-data">
+      <div nz-row>
+        <label>Layer type</label>
+        <nz-select name="layerType" [(ngModel)]="layerType">
+          <nz-option *ngFor="let t of layerTypes" [nzValue]="t" [nzLabel]="t"></nz-option>
+        </nz-select>
+      </div>
+      <div nz-row *ngIf="layerType==='heatmap'">
+        <label>From Layer</label>
+        <nz-select name="layerType" [(ngModel)]="layerConnection">
+          <nz-option *ngFor="let l of pointLayers" [nzValue]="l" [nzLabel]="l"></nz-option>
+        </nz-select>
+      </div>
+      <div nz-row *ngIf="layerType!='heatmap'">
+        <label>From Datasource</label>
+        <nz-select name="layerType" [(ngModel)]="layerConnection">
+          <nz-option *ngFor="let l of layerDatasources" [nzValue]="l.datasourcename" [nzLabel]="l.datasourcename"></nz-option>
+        </nz-select>
+      </div>
+      <div nz-row>
+        <label>Layer name</label>
+        <input type="text" nz-input required name="layerName" [(ngModel)]="layerName" />
+      </div>
+      <div nz-row>
+        <label>Description</label>
+        <input type="text" nz-input name="layerDescription" [(ngModel)]="layerDescription" />
+      </div>
+      <div nz-row>
+        <label>Projection</label>
+        <nz-select [(ngModel)]="layerProjection" name="layerProjection">
+          <nz-option *ngFor="let p of projections" [nzValue]="p" [nzLabel]="p"></nz-option>
+        </nz-select>
+      </div>
+      <div nz-row class="margin-three">
+        <label nz-checkbox [(ngModel)]="layerIsPublic" name="layerIsPublic">
+          <span>Set as public</span>
+        </label>
+      </div>
+      <div nz-row class="margin-three" *ngIf="layerType==='heatmap'">
+        <button nz-button class="wmsbutton" [nzType]="'primary'" [nzLoading]="uploading" (click)="handleNewHeatMap()"
+          style="margin-top: 16px">
+          Create layer
+        </button>
+      </div>
+    </form>
+  </div>
+  <app-symbol-generator></app-symbol-generator>
+</div>

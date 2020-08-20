@@ -1,0 +1,45 @@
+<div class="row import-panel">
+  <div class="col-md-12">
+    <form novalidate enctype="multipart/form-data">
+      <div nz-row>
+        <label>Layer type</label>
+        <nz-select name="layerType" [(ngModel)]="layerType">
+          <nz-option *ngFor="let t of layerTypes" [nzValue]="t" [nzLabel]="t"></nz-option>
+        </nz-select>
+      </div>
+      <div nz-row>
+        <label>Layer name</label>
+        <input type="text" nz-input required name="layerName" [(ngModel)]="layerName" />
+      </div>
+      <div nz-row>
+        <label>Description</label>
+        <input type="text" nz-input name="layerDescription" [(ngModel)]="layerDescription" />
+      </div>
+      <div nz-row>
+        <label>Projection</label>
+        <nz-select [(ngModel)]="layerProjection" name="layerProjection">
+          <nz-option *ngFor="let p of projections" [nzValue]="p" [nzLabel]="p"></nz-option>
+        </nz-select>
+      </div>
+      <div nz-row *ngIf="layerType==='heatmap'">
+        <app-colorbrewer-ramp></app-colorbrewer-ramp>
+      </div>
+      <div nz-row class="margin-three">
+        <label nz-checkbox [(ngModel)]="layerIsPublic" name="layerIsPublic">
+          <span>Set as public</span>
+        </label>
+      </div>
+      <div nz-row class="margin-three">
+        <nz-upload [(nzFileList)]="fileList" [nzBeforeUpload]="beforeUpload">
+          <button nz-button class="wmsbutton" style="margin-bottom: 16px;margin-top: 16px;">
+            <i class="anticon anticon-upload"></i><span>Select File</span>
+          </button>
+        </nz-upload>
+        <button nz-button class="wmsbutton" [nzType]="'primary'" [nzLoading]="uploading" (click)="handleUpload()"
+          [disabled]="fileList.length == 0" style="margin-top: 16px">
+          {{ uploading ? 'Uploading' : 'Start Upload' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
