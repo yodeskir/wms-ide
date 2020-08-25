@@ -25,8 +25,11 @@ namespace wms_ide
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowAll", builder =>
-                    builder.AllowAnyOrigin()
+                options.AddPolicy("AllowOrigins",
+                    builder => builder
+                    .WithOrigins("http://localhost:4200")
+                    .WithOrigins("http://appgis.eastus.cloudapp.azure.com")
+                    .WithOrigins("http://appgis.com")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());
@@ -42,35 +45,28 @@ namespace wms_ide
             services.AddHttpContextAccessor();
             services.AddMvc(options =>
                  options.Filters.Add(new IgnoreAntiforgeryTokenAttribute())
-            ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            );
 
             services.RegisterServices(Configuration);
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IMemoryCache cache, IUserDBContextFactory userDBContextFactory, IMapFileManager mapFileManager)
+        public void Configure(IApplicationBuilder app, IMemoryCache cache, IUserDBContextFactory userDBContextFactory, IMapFileManager mapFileManager)
         {
-            using (var context = userDBContextFactory.Create())
-            {
-                
-            }
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                app.UseHsts();
-            }
-
-            //app.UseHttpsRedirection();
+            app.UseExceptionHandler("/Error");
+            app.UseHsts();
+            
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
-            app.UseMvc();
+            app.UseCors("AllowOrigins");
+            app.UseRouting();
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

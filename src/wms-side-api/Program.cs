@@ -17,7 +17,7 @@ namespace wms_ide
 
             Console.WriteLine($"Using ASPNETCORE_ENVIRONMENT = {environmentName}");
 
-            var urls = configuration.GetValue("UseUrls", "http://0.0.0.0");
+            var urls = configuration.GetValue("UseUrls", "http://0.0.0.0:5001");
 
             BuildWebHost(args, urls).Run();
 

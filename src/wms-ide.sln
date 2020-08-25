@@ -5,6 +5,16 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wms-ide", "wms-side-api\wms-ide.csproj", "{7F125843-2317-4900-87A6-73AA6F2E4090}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "file-manager", "wms-file-manager\file-manager.csproj", "{BD2B630F-9A1A-42FA-A4E4-AF2D6BB8896F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mapfile-manager", "wms-mapfile-manager\mapfile-manager.csproj", "{9071F326-B6AE-4875-939F-C5D2BEEBA4B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wms-tools", "wms-tools\wms-tools.csproj", "{98133EA3-1375-4194-BD76-9BCFBE479BF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wms-shared", "wms-shared\wms-shared.csproj", "{14287FE8-86BA-49E6-BDEE-08D1517B2FE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wms-data-access", "wms-data-access\wms-data-access.csproj", "{97889BFA-7AC7-4D6A-B224-676605458F65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{7F125843-2317-4900-87A6-73AA6F2E4090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F125843-2317-4900-87A6-73AA6F2E4090}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F125843-2317-4900-87A6-73AA6F2E4090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2B630F-9A1A-42FA-A4E4-AF2D6BB8896F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2B630F-9A1A-42FA-A4E4-AF2D6BB8896F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2B630F-9A1A-42FA-A4E4-AF2D6BB8896F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2B630F-9A1A-42FA-A4E4-AF2D6BB8896F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9071F326-B6AE-4875-939F-C5D2BEEBA4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9071F326-B6AE-4875-939F-C5D2BEEBA4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9071F326-B6AE-4875-939F-C5D2BEEBA4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9071F326-B6AE-4875-939F-C5D2BEEBA4B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98133EA3-1375-4194-BD76-9BCFBE479BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98133EA3-1375-4194-BD76-9BCFBE479BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98133EA3-1375-4194-BD76-9BCFBE479BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98133EA3-1375-4194-BD76-9BCFBE479BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14287FE8-86BA-49E6-BDEE-08D1517B2FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14287FE8-86BA-49E6-BDEE-08D1517B2FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14287FE8-86BA-49E6-BDEE-08D1517B2FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14287FE8-86BA-49E6-BDEE-08D1517B2FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97889BFA-7AC7-4D6A-B224-676605458F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97889BFA-7AC7-4D6A-B224-676605458F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97889BFA-7AC7-4D6A-B224-676605458F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97889BFA-7AC7-4D6A-B224-676605458F65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

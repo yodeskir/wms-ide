@@ -25,7 +25,7 @@ export class WmsGenericComponent implements OnInit {
   @Input() wmsItem: WmsItem[];
   @Input() srcfields: Array<string>;
   @Input() typeOrigin: boolean;
-  @ViewChild(WmsDirective) wmsHost: WmsDirective;
+  @ViewChild(WmsDirective, {  }) wmsHost: WmsDirective;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
 

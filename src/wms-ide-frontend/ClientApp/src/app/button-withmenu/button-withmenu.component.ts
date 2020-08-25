@@ -14,7 +14,7 @@ export class ButtonWithmenuComponent implements OnInit {
   @Input() buttonClass: '';
   @Input() blockParent: any;
   @Input() itemMenus: Array<any> = [];
-  @ViewChild(ContextMenuComponent) public entriesMenu: ContextMenuComponent;
+  @ViewChild(ContextMenuComponent, {  }) public entriesMenu: ContextMenuComponent;
 
 
   constructor(protected ctxMenu: ContextMenuService, private menuService: NavMenuService) { }

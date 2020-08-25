@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <AssemblyName>wms_ide</AssemblyName>
-    <RootNamespace>wms_ide</RootNamespace>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>wms-ide</AssemblyName>
+    <RootNamespace>wmside</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -177,10 +177,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -262,10 +258,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\fileManager\fileManager.csproj" />
-    <ProjectReference Include="..\mapfileManager\mapfileManager.csproj" />
-    <ProjectReference Include="..\wmsDataAccess\wmsDataAccess.csproj" />
-    <ProjectReference Include="..\wmsShared\wmsShared.csproj" />
+    <ProjectReference Include="..\wms-file-manager\file-manager.csproj" />
+    <ProjectReference Include="..\wms-mapfile-manager\mapfile-manager.csproj" />
+    <ProjectReference Include="..\wms-data-access\wms-data-access.csproj" />
+    <ProjectReference Include="..\wms-shared\wms-shared.csproj" />
   </ItemGroup>
 
 </Project>

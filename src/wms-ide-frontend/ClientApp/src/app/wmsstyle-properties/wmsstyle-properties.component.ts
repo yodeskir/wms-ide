@@ -45,8 +45,8 @@ export class WmsstylePropertiesComponent implements OnInit {
   crumb = 'LAYER';
   crumbs = ['LAYER'];
 
-  @ViewChild('wmsValueComponent') wmsValueComponent: WmsGenericComponent;
-  @ViewChild(ContextMenuComponent) public actionMenu: ContextMenuComponent;
+  @ViewChild('wmsValueComponent', {  }) wmsValueComponent: WmsGenericComponent;
+  @ViewChild(ContextMenuComponent, {  }) public actionMenu: ContextMenuComponent;
   actionMenuEntries: Array<any> = [];
   confirmDeleteModal: NzModalRef;
 

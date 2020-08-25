@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ColorChromeModule } from 'ngx-color/chrome';
 import { ColorSketchModule } from 'ngx-color/sketch'
-import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
+//import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppComponent } from './app.component';
@@ -19,7 +19,7 @@ import { ContextMenuModule, ContextMenuService } from 'ngx-contextmenu';
 import { DragulaModule } from 'ng2-dragula';
 import { AgGridModule } from 'ag-grid-angular';
 
-import { ScrollbarModule } from 'ngx-scrollbar';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 import { WmsGenericComponent } from './wms-components/wms-generic/wms-generic.component';
 import { WmsDirective } from './wms-components/wms-generic/wms.directive';
 import { WmsInputComponent } from './wms-components/wms-input/wms-input.component';
@@ -42,7 +42,7 @@ import { ImportDatasourceComponent } from './import-datasource/import-datasource
 import { TogeomDatasourceComponent } from './togeom-datasource/togeom-datasource.component';
 import { ButtonWithmenuComponent } from './button-withmenu/button-withmenu.component';
 import { MapStateService } from './services/map-state.service';
-import { MvtMapComponent } from './mvt-map/mvt-map.component';
+//import { MvtMapComponent } from './mvt-map/mvt-map.component';
 import { WmsstylePropertiesComponent } from './wmsstyle-properties/wmsstyle-properties.component';
 import { WmsstyleItemComponent } from './wmsstyle-item/wmsstyle-item.component';
 import { LoginComponent } from './login/login.component';
@@ -58,6 +58,7 @@ import { WmsModalComponent } from './wms-modal/wms-modal.component';
 import { NewfromDatasourceComponent } from './newfrom-datasource/newfrom-datasource.component';
 import { ColorbrewerRampComponent } from './colorbrewer-ramp/colorbrewer-ramp.component';
 import { SymbolGeneratorComponent } from './symbol-generator/symbol-generator.component';
+import { MvtMapComponent } from './mvt-map/mvt-map.component';
 
 @NgModule({
   declarations: [
@@ -117,13 +118,13 @@ import { SymbolGeneratorComponent } from './symbol-generator/symbol-generator.co
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ScrollbarModule,
+    NgScrollbarModule,
     ColorChromeModule,
     ColorSketchModule,
     ContextMenuModule.forRoot({
       autoFocus: false,
     }),
-    NgxMapboxGLModule,
+    //NgxMapboxGLModule,
     DragulaModule.forRoot(),
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent, pathMatch: 'full' },
